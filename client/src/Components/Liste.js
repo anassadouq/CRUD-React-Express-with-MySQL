@@ -26,7 +26,7 @@ export default function Liste() {
             <Link to="/create">
                 <button>Create User</button>
             </Link>
-            <table>
+            <table width="100%" style={{"textAlign":"center"}}>
                 <thead>
                     <th>Nom</th>
                     <th>Prenom</th>
@@ -39,7 +39,7 @@ export default function Liste() {
                         <td>{user.prenom}</td>
                         <td>{user.adresse}</td>
                         <td>
-                            <Link to={`/edit/${user.id}`}>Edit</Link>
+                            <Link to={`/edit/${user.id}`}>Edit</Link>&nbsp;
                             <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
                         </td>
                     </tbody>
