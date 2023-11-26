@@ -41,20 +41,25 @@ export default function Edit() {
     return (
         <form onSubmit={updateUser}>
             <table>
-                <tbody>
-                        <td>
-                            Nom : <input type="text" value={nom} onChange={(e) => {setNom(e.target.value)}}/>
-                        </td>
-                        <td>
-                            Prenom : <input type="text" value={prenom} onChange={(e) => {setPrenom(e.target.value)}}/>
-                        </td>
-                        <td>
-                            Adresse : <input type="text" value={adresse} onChange={(e) => {setAdresse(e.target.value)}}/>
-                        </td>
-                        <td>
-                            <button type="submit" className="btn btn-secondary">Edit</button>
-                        </td>
-                </tbody>
+                <tr>
+                    <td>Nom</td>
+                    <td>                
+                        <input type="text" value={nom} onChange={(e) => {setNom(e.target.value)}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prenom</td>
+                    <td>                
+                        <input type="text" value={prenom} onChange={(e) => {setPrenom(e.target.value)}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td>                
+                        <input type="text" value={adresse} onChange={(e) => {setAdresse(e.target.value)}}/>
+                        <button>Edit</button>
+                    </td>
+                </tr>
             </table>
         </form>
     );

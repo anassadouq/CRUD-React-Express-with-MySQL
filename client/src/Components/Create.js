@@ -33,23 +33,26 @@ export default function Create() {
 
     return (
         <form onSubmit={createUser}>
-            <table className="mx-3">
-                <tbody>
-                    <tr>
-                        <td>
-                            Nom : <input type="text" required onChange={(e) => {setNom(e.target.value)}}/>
-                        </td>
-                        <td>
-                            Prenom : <input type="text" required onChange={(e) => {setPrenom(e.target.value)}}/>
-                        </td>
-                        <td>
-                            Adresse : <input type="text" required onChange={(e) => {setAdresse(e.target.value)}}/>
-                        </td>
-                        <td>
-                            <button type="submit">Create</button>
-                        </td>
-                    </tr>
-                </tbody>
+            <table>
+                <tr>
+                    <td>Nom</td>
+                    <td>                
+                        <input type="text" onChange={(e) => {setNom(e.target.value)}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prenom</td>
+                    <td>                
+                        <input type="text" onChange={(e) => {setPrenom(e.target.value)}}/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adresse</td>
+                    <td>                
+                        <input type="text" onChange={(e) => {setAdresse(e.target.value)}}/>
+                        <button>Create</button>
+                    </td>
+                </tr>
             </table>
         </form>
     );
